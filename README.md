@@ -14,7 +14,7 @@ Além disso, conectei a aplicação com o banco de dados Postgres e utilizei o a
 3. [PostgreSQL](https://www.postgresql.org/)
 
 ## Como rodar
-Para testar, execute o virtualenv com às dependências do projeto. Execute o servidor django, executando na pasta `DjangoProject` o comando `python manage.py runserver`.
+Para testar, execute o virtualenv com às dependências do projeto. Execute o servidor django, executando na pasta `Site_de_Receitas` o comando `python manage.py runserver`.
 
 Acesse `http://localhost:8000/`. Ao fim, você será direcionado a página inicial.
 
