@@ -2,6 +2,15 @@
 {% load static %}
 {% block content %}
 
+<style>
+
+    .formata-imagem{
+        max-width: 100%;
+        width: 330px;
+        height: 200px; 
+    }
+
+</style>
 
         <!-- Preloader -->
         <div id="preloader">
@@ -38,8 +47,12 @@
                     <!-- Single Best Receipe Area -->
                     <div class="col-12 col-sm-6 col-lg-4">
                         <div class="single-best-receipe-area mb-30">
-                            <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
-                            <div class="receipe-content">
+                            {% if LivroReceitas.foto_receita == '' %}
+                                <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="" class="formata-imagem">
+                            {% else %}
+                                <img src="{{ LivroReceitas.foto_receita.url }}" alt="" class="formata-imagem">
+                            {% endif %}
+                                <div class="receipe-content">
                                 <a href="{% url 'receita' LivroReceitas.id %}">
                                     <h5>{{ LivroReceitas.nome_receita }}</h5>
                                 </a>

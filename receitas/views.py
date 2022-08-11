@@ -4,7 +4,7 @@ from .models import LivroReceitas
 
 
 def index(request):
-    livros = LivroReceitas.objects.all()
+    livros = LivroReceitas.objects.order_by('-date_receita').filter(publicada=True)
 
     dados = {
         'livros' : livros
